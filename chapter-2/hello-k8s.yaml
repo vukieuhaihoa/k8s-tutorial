@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-k8s
+  labels:
+    environment: testing
+    project: Test-K8Ss
+spec:
+  containers:
+    - name: hello-k8s
+      image: haihoanguci/hello-k8s
+      ports:
+        - containerPort: 3000
+          protocol: TCP
