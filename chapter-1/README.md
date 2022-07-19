@@ -57,12 +57,13 @@ Master Node nó giống như đại ca vậy, quản lý một danh sách đàn 
 
 1. Master node core component
 
-- kube-apiserver:
-- etcd:
-- kube-scheduler:
-- kube-controller-manager
+- kube-apiserver: cái này dùng để quản lý cluster, tương tác với các worker trong hệ sinh thái của k
+- etcd: database lưu trữ dạng key value, baking store cho cluster data
+- kube-scheduler: Quan sát xem có thằng Pod nào được tạo mới không, đặt pod mới vào một worker
+- kube-controller-manager: runs controller processes.
 
 2. Worker node core component:
 
-- kubelet
-- k-proxy
+- kubelet: An agent that runs on each node in the cluster. It makes sure that containers are running in a Pod.
+- k-proxy: kube-proxy is a network proxy that runs on each node in your cluster, implementing part of the Kubernetes Service concept. kube-proxy maintains network rules on nodes. These network rules allow network communication to your Pods from network sessions inside or outside of your cluster.
+- container runtime: responsible for running containers.

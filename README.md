@@ -1,6 +1,6 @@
 # Đây là series mà mình tạo ra để học kubernetes
 
-Notes: Minh viết lại cho đỡ quên trong quá trình học của mình
+Notes: Mình viết lại cho đỡ quên trong quá trình học của mình
 
 > Những cái trong này là ý kiến chủ quan của mình sau khi đọc tham khảo tài liệu từ trang chủ, các bài blog của các anh, chị, em trên internet.
 

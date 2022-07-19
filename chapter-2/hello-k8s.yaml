@@ -1,10 +1,48 @@
+# Create namespace
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: testing
+---
 apiVersion: v1
 kind: Pod
 metadata:
-  name: hello-k8s
+  name: hello-k8s-testing
+  # add pod to namespace
+  # namespace: testing
   labels:
     environment: testing
-    project: Test-K8Ss
+    project: K8s-series
+spec:
+  containers:
+    - name: hello-k8s
+      image: haihoanguci/hello-k8s
+      ports:
+        - containerPort: 3000
+          protocol: TCP
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-k8s-staging
+  labels:
+    environment: staging
+    project: K8s-series
+spec:
+  containers:
+    - name: hello-k8s
+      image: haihoanguci/hello-k8s
+      ports:
+        - containerPort: 3000
+          protocol: TCP
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-k8s-production
+  labels:
+    environment: production
+    project: K8s-series
 spec:
   containers:
     - name: hello-k8s
