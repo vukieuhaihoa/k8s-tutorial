@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: hello-kube
+spec:
+  replicas: 3
+  selector:
+    app: hello-kube
+  template:
+    metadata:
+      name: hello-kube
+      labels:
+        app: hello-kube
+    spec:
+      containers:
+        - name: hello-kube
+          image: haihoanguci/hello-k8s
+          ports:
+            - containerPort: 3000
