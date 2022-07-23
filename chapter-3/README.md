@@ -19,7 +19,7 @@ Sử dụng ReplicationControllers để chạy pod sẽ giúp ứng dụng củ
 
 ## Sử dụng ReplicaSets thay thế RC
 
-Đây là một resource tương tự như RC, nhưng nó là một phiên bản mới hơn của RC và sẽ được sử dụng để thay thế RC. Chúng ta sẽ dùng ReplicaSets (RS) để deploy pod thay vì dùng RC, ở bài này mình nói về RC trước để chúng ta hiểu được nguồn gốc của nó, để đi phỏng vấn có bị hỏi vẫn biết trả lời 😁.
+Đây là một resource tương tự như RC, nhưng nó là một phiên bản mới hơn của RC và sẽ được sử dụng để thay thế RC. Chúng ta sẽ dùng ReplicaSets (RS) để deploy pod thay vì dùng RC.
 
 ## So sánh ReplicaSets và ReplicationController
 
